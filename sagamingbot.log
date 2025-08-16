@@ -1,0 +1,122 @@
+2025-07-11 01:13:43,560:INFO:Calculated checksum: aad715129958f71a85cdb41adb50a4f8
+2025-07-11 01:13:43,562:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:13:44,408:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:13:44,409:INFO:Attempting login for username: hackler
+2025-07-11 01:13:44,410:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:13:45,448:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:13:49,787:INFO:Attempting to validate license key: KEYAUTH-EIiJkd-JPmy9H-JCTxDf-E8UNl0-IFKH38-2AxnjE
+2025-07-11 01:13:49,787:INFO:Using HWID: S-1-5-21-3393599320-1403758574-1361601276-1000
+2025-07-11 01:13:49,788:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:13:50,662:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:13:50,663:INFO:License key validated successfully
+2025-07-11 01:13:50,771:ERROR:License validation failed: 'SAGamingBot' object has no attribute 'run'
+2025-07-11 01:14:34,212:INFO:Attempting to validate license key: KEYAUTH-EIiJkd-JPmy9H-JCTxDf-E8UNl0-IFKH38-2AxnjE
+2025-07-11 01:14:34,212:INFO:Using HWID: S-1-5-21-3393599320-1403758574-1361601276-1000
+2025-07-11 01:14:34,213:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:14:35,344:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:14:35,345:INFO:License key validated successfully
+2025-07-11 01:14:35,463:ERROR:License validation failed: 'SAGamingBot' object has no attribute 'run'
+2025-07-11 01:14:55,578:INFO:Attempting to validate license key: KEYAUTH-EIiJkd-JPmy9H-JCTxDf-E8UNl0-IFKH38-2AxnjE
+2025-07-11 01:14:55,578:INFO:Using HWID: N/A
+2025-07-11 01:14:55,580:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:14:56,415:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:14:56,415:INFO:License key validated successfully
+2025-07-11 01:14:56,510:ERROR:License validation failed: 'SAGamingBot' object has no attribute 'run'
+2025-07-11 01:15:04,725:INFO:Attempting to validate license key: KEYAUTH-70HCLx-z8gY9o-8Ju0OX-xmChgr-9zLmUW-2ME6Ya
+2025-07-11 01:15:04,725:INFO:Using HWID: S-1-5-21-3393599320-1403758574-1361601276-1000
+2025-07-11 01:15:04,726:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:15:05,900:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:15:57,472:INFO:Calculated checksum: aad715129958f71a85cdb41adb50a4f8
+2025-07-11 01:15:57,473:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:15:59,103:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:15:59,104:INFO:Attempting registration for username: qwe123, license: KEYAUTH-vgBs75-LmwDW8-8Pt08X-s279c5-2iEXom-CgIhfb
+2025-07-11 01:15:59,105:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:16:01,488:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:16:15,204:INFO:Calculated checksum: aad715129958f71a85cdb41adb50a4f8
+2025-07-11 01:16:15,205:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:16:15,727:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:16:15,727:INFO:Attempting login for username: qwe123
+2025-07-11 01:16:15,728:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:16:16,787:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:16:20,619:INFO:Attempting to validate license key: KEYAUTH-vgBs75-LmwDW8-8Pt08X-s279c5-2iEXom-CgIhfb
+2025-07-11 01:16:20,619:INFO:Using HWID: S-1-5-21-3393599320-1403758574-1361601276-1000
+2025-07-11 01:16:20,620:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:16:21,860:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:18:24,164:INFO:Program interrupted by user
+2025-07-11 01:20:47,105:INFO:Calculated checksum: d8613df86e569113002b738689abe673
+2025-07-11 01:20:47,107:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:20:47,727:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:20:47,728:INFO:Attempting registration for username: hackler, license: KEYAUTH-xP7CmL-qdQ8aL-3NBwUC-zAy3e9-oS8QRw-lgjiZZ
+2025-07-11 01:20:47,728:ERROR:Registration failed: type object 'api' has no attribute 'others'
+2025-07-11 01:20:53,567:INFO:Calculated checksum: d8613df86e569113002b738689abe673
+2025-07-11 01:20:53,568:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:20:54,013:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:20:54,014:INFO:Attempting registration for username: hackler, license: KEYAUTH-xP7CmL-qdQ8aL-3NBwUC-zAy3e9-oS8QRw-lgjiZZ
+2025-07-11 01:20:54,014:ERROR:Registration failed: type object 'api' has no attribute 'others'
+2025-07-11 01:27:03,416:INFO:Calculated checksum: c899883f3a098a796102e7b488edd173
+2025-07-11 01:27:03,417:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:27:04,252:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:27:04,253:INFO:Attempting registration for username: hackler, license: KEYAUTH-xP7CmL-qdQ8aL-3NBwUC-zAy3e9-oS8QRw-lgjiZZ
+2025-07-11 01:27:04,253:ERROR:Registration failed: type object 'api' has no attribute 'others'
+2025-07-11 01:27:27,997:INFO:Calculated checksum: c899883f3a098a796102e7b488edd173
+2025-07-11 01:27:27,998:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:27:28,405:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:27:28,406:INFO:Attempting registration for username: hackler, license: 12
+2025-07-11 01:27:28,406:ERROR:Registration failed: type object 'api' has no attribute 'others'
+2025-07-11 01:28:15,812:INFO:Calculated checksum: c899883f3a098a796102e7b488edd173
+2025-07-11 01:28:15,813:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:28:16,237:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:28:16,238:INFO:Attempting registration for username: hackler, license: KEYAUTH-xP7CmL-qdQ8aL-3NBwUC-zAy3e9-oS8QRw-lgjiZZ
+2025-07-11 01:28:16,238:ERROR:Registration failed: type object 'api' has no attribute 'others'
+2025-07-11 01:28:40,335:INFO:Calculated checksum: c899883f3a098a796102e7b488edd173
+2025-07-11 01:28:40,336:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:28:40,853:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:28:40,853:INFO:Attempting login for username: hackler
+2025-07-11 01:28:40,855:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:28:41,592:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:29:01,825:INFO:Calculated checksum: c899883f3a098a796102e7b488edd173
+2025-07-11 01:29:01,826:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:29:02,425:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:29:02,426:INFO:Attempting registration for username: qwer, license: KEYAUTH-xP7CmL-qdQ8aL-3NBwUC-zAy3e9-oS8QRw-lgjiZZ
+2025-07-11 01:29:02,426:ERROR:Registration failed: type object 'api' has no attribute 'others'
+2025-07-11 01:32:12,829:INFO:Program interrupted by user
+2025-07-11 01:37:28,998:INFO:Calculated checksum: ae2f29a4506358aff684d220fb0532ab
+2025-07-11 01:37:29,000:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:37:29,481:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:37:29,481:ERROR:Fatal error: name 'verify_key' is not defined
+2025-07-11 01:37:50,362:INFO:Calculated checksum: ae2f29a4506358aff684d220fb0532ab
+2025-07-11 01:37:50,366:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:37:51,682:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:37:51,682:ERROR:Fatal error: name 'verify_key' is not defined
+2025-07-11 01:38:21,466:INFO:Calculated checksum: ae2f29a4506358aff684d220fb0532ab
+2025-07-11 01:38:21,468:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:38:21,898:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:38:45,607:INFO:Calculated checksum: ae2f29a4506358aff684d220fb0532ab
+2025-07-11 01:38:45,607:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:38:46,151:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:38:46,152:INFO:Attempting registration for username: hackler, license: KEYAUTH-xP7CmL-qdQ8aL-3NBwUC-zAy3e9-oS8QRw-lgjiZZ
+2025-07-11 01:38:46,152:ERROR:Registration failed: type object 'api' has no attribute 'get_hwid'
+2025-07-11 01:38:51,933:INFO:Calculated checksum: ae2f29a4506358aff684d220fb0532ab
+2025-07-11 01:38:51,934:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:38:52,464:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:38:52,465:INFO:Attempting registration for username: hackler, license: KEYAUTH-xP7CmL-qdQ8aL-3NBwUC-zAy3e9-oS8QRw-lgjiZZ
+2025-07-11 01:38:52,465:ERROR:Registration failed: type object 'api' has no attribute 'get_hwid'
+2025-07-11 01:38:56,834:INFO:Calculated checksum: ae2f29a4506358aff684d220fb0532ab
+2025-07-11 01:38:56,835:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:38:57,300:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:38:57,301:INFO:Attempting registration for username: hackler, license: KEYAUTH-xP7CmL-qdQ8aL-3NBwUC-zAy3e9-oS8QRw-lgjiZZ
+2025-07-11 01:38:57,301:ERROR:Registration failed: type object 'api' has no attribute 'get_hwid'
+2025-07-11 01:39:07,931:INFO:Calculated checksum: ae2f29a4506358aff684d220fb0532ab
+2025-07-11 01:39:07,932:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:39:08,364:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:39:08,366:INFO:Attempting registration for username: hackler, license: KEYAUTH-xP7CmL-qdQ8aL-3NBwUC-zAy3e9-oS8QRw-lgjiZZ
+2025-07-11 01:39:08,366:ERROR:Registration failed: type object 'api' has no attribute 'get_hwid'
+2025-07-11 01:39:26,523:INFO:Calculated checksum: ae2f29a4506358aff684d220fb0532ab
+2025-07-11 01:39:26,526:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:39:27,193:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:39:34,407:INFO:Calculated checksum: ae2f29a4506358aff684d220fb0532ab
+2025-07-11 01:39:34,408:DEBUG:Starting new HTTPS connection (1): keyauth.win:443
+2025-07-11 01:39:35,172:DEBUG:https://keyauth.win:443 "POST /api/1.3/ HTTP/1.1" 200 None
+2025-07-11 01:39:35,173:INFO:Attempting registration for username: asd, license: KEYAUTH-w0RWB9-RWlxPO-lNWeZY-feHMI1-hV9l3O-vgot6e
+2025-07-11 01:39:35,173:ERROR:Registration failed: type object 'api' has no attribute 'get_hwid'
+2025-07-11 01:43:00,409:INFO:Program interrupted by user

@@ -1,0 +1,267 @@
+import customtkinter as ctk
+import tkinter as tk
+from tkinter import messagebox
+import sys
+import os
+import hashlib
+from datetime import datetime, UTC
+import threading
+import importlib.util
+
+# นำเข้า KeyAuth API (ต้องมีไฟล์ KeyAuth.py ในโฟลเดอร์เดียวกัน)
+from keyauth import api
+
+# ตั้งค่า theme
+ctk.set_appearance_mode("dark")
+ctk.set_default_color_theme("blue")
+
+class KeyAuthGUI:
+    def __init__(self):
+        self.root = ctk.CTk()
+        self.root.title("KeyAuth System")
+        self.root.geometry("400x500")
+        self.root.resizable(False, False)
+        
+        # ตั้งค่า KeyAuth
+        self.keyauthapp = None
+        self.init_keyauth()
+        
+        # สถานะผู้ใช้
+        self.user_logged_in = False
+        self.user_data = None
+        
+        # สร้างหน้า login
+        self.create_login_frame()
+        
+    def init_keyauth(self):
+        """เริ่มต้น KeyAuth API"""
+        try:
+            def getchecksum():
+                md5_hash = hashlib.md5()
+                file = open(''.join(sys.argv), "rb")
+                md5_hash.update(file.read())
+                digest = md5_hash.hexdigest()
+                return digest
+                
+            self.keyauthapp = api(
+                name="Siwkrnesgyixwork's Application",
+                ownerid="WViBkkZ5dX", 
+                version="1.0",
+                hash_to_check=getchecksum()
+            )
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to initialize KeyAuth: {str(e)}")
+            sys.exit(1)
+    
+    def create_login_frame(self):
+        """สร้างหน้า login"""
+        self.login_frame = ctk.CTkFrame(self.root)
+        self.login_frame.pack(fill="both", expand=True, padx=20, pady=20)
+        
+        # หัวข้อ
+        title_label = ctk.CTkLabel(self.login_frame, text="KeyAuth Login", 
+                                  font=ctk.CTkFont(size=24, weight="bold"))
+        title_label.pack(pady=(30, 40))
+        
+        # Username
+        self.username_entry = ctk.CTkEntry(self.login_frame, placeholder_text="Username", 
+                                          width=300, height=40)
+        self.username_entry.pack(pady=10)
+        
+        # Password
+        self.password_entry = ctk.CTkEntry(self.login_frame, placeholder_text="Password", 
+                                          show="*", width=300, height=40)
+        self.password_entry.pack(pady=10)
+        
+        # ปุ่ม Login
+        login_btn = ctk.CTkButton(self.login_frame, text="Login", 
+                                 command=self.login_user, width=300, height=40)
+        login_btn.pack(pady=20)
+        
+        # ปุ่ม Register
+        register_btn = ctk.CTkButton(self.login_frame, text="Register", 
+                                   command=self.show_register_frame, width=300, height=40,
+                                   fg_color="green", hover_color="darkgreen")
+        register_btn.pack(pady=10)
+        
+        # License Key Section
+        license_section_frame = ctk.CTkFrame(self.login_frame)
+        license_section_frame.pack(fill="x", padx=20, pady=20)
+        
+        license_title_label = ctk.CTkLabel(license_section_frame, text="License Key Login", 
+                                         font=ctk.CTkFont(size=16, weight="bold"))
+        license_title_label.pack(pady=(10, 15))
+        
+        # License Key Entry
+        self.license_entry = ctk.CTkEntry(license_section_frame, placeholder_text="Enter License Key", 
+                                         width=300, height=40)
+        self.license_entry.pack(pady=10)
+        
+        # License Login Button
+        license_login_btn = ctk.CTkButton(license_section_frame, text="Login with License", 
+                                        command=self.license_login, width=300, height=40,
+                                        fg_color="orange", hover_color="darkorange")
+        license_login_btn.pack(pady=10)
+        
+    def create_register_frame(self):
+        """สร้างหน้า register"""
+        self.register_frame = ctk.CTkFrame(self.root)
+        self.register_frame.pack(fill="both", expand=True, padx=20, pady=20)
+        
+        # หัวข้อ
+        title_label = ctk.CTkLabel(self.register_frame, text="Register Account", 
+                                  font=ctk.CTkFont(size=24, weight="bold"))
+        title_label.pack(pady=(30, 40))
+        
+        # Username
+        self.reg_username_entry = ctk.CTkEntry(self.register_frame, placeholder_text="Username", 
+                                              width=300, height=40)
+        self.reg_username_entry.pack(pady=10)
+        
+        # Password
+        self.reg_password_entry = ctk.CTkEntry(self.register_frame, placeholder_text="Password", 
+                                              show="*", width=300, height=40)
+        self.reg_password_entry.pack(pady=10)
+        
+        # Confirm Password
+        self.reg_confirm_password_entry = ctk.CTkEntry(self.register_frame, placeholder_text="Confirm Password", 
+                                                      show="*", width=300, height=40)
+        self.reg_confirm_password_entry.pack(pady=10)
+        
+        # License Key
+        self.reg_license_entry = ctk.CTkEntry(self.register_frame, placeholder_text="License Key", 
+                                             width=300, height=40)
+        self.reg_license_entry.pack(pady=10)
+        
+        # ปุ่ม Register
+        register_btn = ctk.CTkButton(self.register_frame, text="Register", 
+                                   command=self.register_user, width=300, height=40,
+                                   fg_color="green", hover_color="darkgreen")
+        register_btn.pack(pady=20)
+        
+        # ปุ่ม Back to Login
+        back_btn = ctk.CTkButton(self.register_frame, text="Back to Login", 
+                               command=self.show_login_frame, width=300, height=40,
+                               fg_color="gray", hover_color="darkgray")
+        back_btn.pack(pady=10)
+        
+    def launch_sa_game(self):
+        """เรียกใช้ SA-GAME.py"""
+        try:
+            # ตรวจสอบว่าไฟล์ SA-GAME.py มีอยู่หรือไม่
+            if not os.path.exists("SA-GAME.py"):
+                messagebox.showerror("Error", "SA-GAME.py not found in current directory")
+                return
+                
+            # Import และเรียกใช้ SA-GAME.py พร้อมส่งข้อมูล user_data
+            import importlib.util
+            spec = importlib.util.spec_from_file_location("SA-GAME", "SA-GAME.py")
+            sa_game_module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(sa_game_module)
+            
+            # สร้าง instance ของ SAGamingBot พร้อมส่งข้อมูล user_data
+            bot = sa_game_module.SAGamingBot(user_data=self.user_data)
+            
+            # ปิดหน้าต่าง KeyAuth
+            self.root.destroy()
+            
+            # เรียกใช้ SA Gaming Bot
+            bot.run()
+            
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to launch SA-GAME.py: {str(e)}")
+        
+    def show_login_frame(self):
+        """แสดงหน้า login"""
+        if hasattr(self, 'register_frame'):
+            self.register_frame.destroy()
+        self.create_login_frame()
+        
+    def show_register_frame(self):
+        """แสดงหน้า register"""
+        self.login_frame.destroy()
+        self.create_register_frame()
+        
+    def login_user(self):
+        """ฟังก์ชัน login"""
+        username = self.username_entry.get().strip()
+        password = self.password_entry.get().strip()
+        
+        if not username or not password:
+            messagebox.showerror("Error", "Please enter username and password")
+            return
+            
+        def login_thread():
+            try:
+                self.keyauthapp.login(username, password)
+                    
+                self.user_data = self.keyauthapp.user_data
+                self.user_logged_in = True
+                
+                # เรียกใช้ SA-GAME.py
+                self.root.after(0, self.launch_sa_game)
+                
+            except Exception as e:
+                self.root.after(0, lambda: messagebox.showerror("Login Failed", str(e)))
+                
+        threading.Thread(target=login_thread, daemon=True).start()
+        
+    def register_user(self):
+        """ฟังก์ชัน register"""
+        username = self.reg_username_entry.get().strip()
+        password = self.reg_password_entry.get().strip()
+        confirm_password = self.reg_confirm_password_entry.get().strip()
+        license_key = self.reg_license_entry.get().strip()
+        
+        if not all([username, password, confirm_password, license_key]):
+            messagebox.showerror("Error", "Please fill in all fields")
+            return
+            
+        if password != confirm_password:
+            messagebox.showerror("Error", "Passwords do not match")
+            return
+            
+        def register_thread():
+            try:
+                self.keyauthapp.register(username, password, license_key)
+                self.user_data = self.keyauthapp.user_data
+                self.user_logged_in = True
+                
+                # เรียกใช้ SA-GAME.py
+                self.root.after(0, self.launch_sa_game)
+                
+            except Exception as e:
+                self.root.after(0, lambda: messagebox.showerror("Registration Failed", str(e)))
+                
+        threading.Thread(target=register_thread, daemon=True).start()
+        
+    def license_login(self):
+        """ฟังก์ชัน license login"""
+        license_key = self.license_entry.get().strip()
+        
+        if not license_key:
+            messagebox.showerror("Error", "Please enter license key")
+            return
+            
+        def license_thread():
+            try:
+                self.keyauthapp.license(license_key)
+                    
+                self.user_data = self.keyauthapp.user_data
+                self.user_logged_in = True
+                
+                # เรียกใช้ SA-GAME.py
+                self.root.after(0, self.launch_sa_game)
+                
+            except Exception as e:
+                self.root.after(0, lambda: messagebox.showerror("License Login Failed", str(e)))
+                
+        threading.Thread(target=license_thread, daemon=True).start()
+        
+    def run(self):
+        """เริ่มต้นโปรแกรม"""
+        self.root.mainloop()
+
+if __name__ == "__main__":
+    app = KeyAuthGUI()
+    app.run()

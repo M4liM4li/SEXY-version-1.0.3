@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed --collect-all keyauth --collect-all discord_interactions --collect-all nacl --collect-all _cffi_backend --icon=icon.ico Main.py
